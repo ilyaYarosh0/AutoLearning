@@ -14,6 +14,7 @@ class BaseTest:
     @pytest.fixture(autouse=True)
     def setup(self, request, driver):
         request.cls.driver = driver
+
         request.cls.login_page = LoginPage(driver)
-        request.cls.dashboard_page= DashboardPage(driver)
+        request.cls.dashboard_page = DashboardPage(driver)
         request.cls.personal_page = PersonalPage(driver)
